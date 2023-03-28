@@ -49,6 +49,7 @@ header, main, footer{
 
 header{
     height: 8vh;
+    background-color: black;
 }
 
 
@@ -65,10 +66,14 @@ section{
     align-items: center;
 }
 
-header > .logo{
+.header-logo{
     width: 30%;
     height: 100%;
     justify-content: center;
+}
+
+.header-logo > img{
+    height: 80%;
 }
 
 header > .header-options{
@@ -189,6 +194,75 @@ main{
     color: #202225;
 }
 
+.card-training{
+    width: 100%;
+    height: 20vh;
+    background-color: #FDD000;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #202225;
+}
+
+.students{
+    flex-direction: column;
+    margin-bottom: 12vh;   
+}
+
+.training-title, .students-title{
+    height: 30%;
+    width: 100%;
+    margin-bottom: 4vh;  
+}
+
+.training-box, .students-box{
+  height: 70%;  
+  width: 100%;
+}
+
+
+.students-box{
+    height: 70%;  
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px
+}
+
+.card-student{
+    width: 80%;
+    max-width: 350px;
+    height: 300px;
+    background-color: #4D5159;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+
+footer{
+    flex-direction: column;
+    margin-bottom: 8vh;
+}
+
+footer > .map{
+    width: 100%;
+}
+
+footer >  p {
+    margin-bottom: 2vh;
+}
+
+/* .card-training:hover{
+    cursor: pointer;
+    background-color: #FDD000;
+    color: #202225;
+} */
+
 /* .hover-card-training{
     width: 100%;
     height: 100%;
@@ -201,6 +275,10 @@ main{
     opacity: 0.2;
 } */
 
+/* @media screen and (max-device-width: 500px) {
+
+    
+} */
 
 @keyframes fromLeft{
     from{
