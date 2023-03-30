@@ -97,9 +97,28 @@ main{
     height: 100%;
     background-image: url(./assets/home.jpg);
     background-repeat: no-repeat;
-    opacity: 0.1;
+    opacity: 0.05;
     z-index: 0;
 }
+
+.home > article > button{
+    border: 2px solid #FDD000;
+    background-color: #202225;
+    color: #FDD000;
+    font-size: 16px;
+    font-weight: 700;
+    width: 160px;
+    height: 40px;
+    box-shadow: 4px 4px 1px #4D5159;
+}
+
+/* .home > article > button:hover{
+    cursor: pointer;
+    border: none;
+    background-color: #FDD000;
+    color: #202225;
+    box-shadow: none;
+} */
 
 .about{
     background-color: #2F3136;
@@ -119,21 +138,26 @@ main{
 }
 
 .about-box > button{
-    background-color: #2F3136;
-    color: white;
-    border: 4px solid #FDD000;
-    border-radius: 12px;
+    
+    background-color: #FDD000;
+    color: #2F3136;
+    /* border: 4px solid #FDD000; */
+    border: none;
+    
+    /* border-radius: 12px; */
 }
 
 .about-box > button:hover{
     cursor: pointer;
-    color: #2F3136;
-    background-color: #FDD000;
+    /* color: white;
+    background-color: #2F3136; */
+    box-shadow: 4px 4px 1px #4D5159;
+    opacity: 0.8;
 }
 
 .training{
     flex-direction: column;
-    
+    background-color: #2F3136;
 }
 
 .training > article:first-child{
@@ -187,7 +211,7 @@ main{
     max-width: 350px;
     height: 300px;
     background-color: #4D5159;
-    border-radius: 8px;
+    border-radius: 16px 0 16px 0;
     display: flex;
     flex-direction: column;
     padding: 12px;
@@ -212,23 +236,44 @@ footer >  p {
         font-size: 40px;
     }
 
+    header{
+        background-color: #202225;
+    }
+
     header, main, footer{
         width: 100%;
     }
 
     .home:before {
-        background-image: url(./assets/backgroundhome.jpg);
-        background-position: top right;
-        background-size: 100% auto;
+        background-image: url(./assets/fundohomePage.png);
+        background-position: center left;
+        background-size: 50% auto;
     }
 
     .home {
-        justify-content: flex-start;
+        justify-content: center;
         padding-left: 8vw;
     }
 
     .home > article > h2 {
         font-size: 60px;
+    }
+
+    .home > div{
+        position: fixed;
+        right: 2%;
+        top: 40;
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .home > div > span > img {
+        width: 30px;
+    }
+
+    .home > div > span > img:hover {
+        cursor: pointer;
     }
 
     .about-box > button{
