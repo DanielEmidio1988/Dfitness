@@ -3,28 +3,36 @@
 Esta é uma Landing Page construida para a academia de Cross Training DFitness localizada no Capão Redondo-SP, com objetivo de promover o espaço de treinamento ao publico da região que buscam novas práticas esportivas.
 
 ## 🔗Link de Acesso
-- Deploy Github Pages: Em breve
+- Deploy Github Pages: [clique aqui!](https://danielemidio1988.github.io/Dfitness/).
 
 ## 👥Equipe
 | [<img src="https://avatars.githubusercontent.com/u/111311678?v=4" width=115><br><sub>Daniel Emidio</sub>](https://github.com/DanielEmidio1988) |
 | :---: |
 
 ## 🧭Status do Projeto
-- ⏳Em andamento
+- ⏳Concluído
 
 ## 📄Concepção do Projeto
 
 ### Layout Mobile
 
-Em breve
+| <img src="./assets/layoutMobile.png" width=200><br><sub>Home</sub> | 
+| :---: | 
 
 ### Layout Tablet
 
-Em breve
+| <img src="./assets/layoutTablet.png" width=400><br><sub>Home</sub> | 
+| :---: | 
 
 ### Layout Desktop
 
-Em breve
+| <img src="./assets/layoutDesktop.png" width=600><br><sub>Home</sub> | 
+| :---: | 
+
+### Funcionalidades
+```bash
+. Responsividade: Aplicação totalmente responsiva para Desktop, Tablet e Celulares;
+```
 
 
 ## 💡Programas utilizados:

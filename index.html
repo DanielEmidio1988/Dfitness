@@ -19,11 +19,11 @@
             </div>
             <div class="header-options">
                 <ul class="options-menu-close">
-                    <li>HOME</li>
-                    <li>SOBRE</li>
-                    <li>AULAS</li>
-                    <li>GALERIA</li>
-                    <li>CONTATO</li>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">SOBRE</a></li>
+                    <li><a href="#training">AULAS</a></li>
+                    <li><a href="#photo-album">GALERIA</a></li>
+                    <li><a href="#footer">CONTATO</a></li>
                 </ul>
                 <img class="options-menu-hamburguer" src="./assets/menu.svg" alt="menu-hamburguer" onclick="ToggleMenu()">
             </div>
@@ -31,11 +31,11 @@
         </header>
         <main>
 
-            <section class="home">
+            <section class="home" id="home">
                 <article>
                     <h2>CROSS TRAINING</h2>
                     <h1>DFITNESS</h1>
-                    <button>O COACH</button>
+                    <button href="#about">O COACH</button>
                 </article>
                 <div>
                     <span><img src="./assets/logo-whatsapp.svg" alt="logo-whatsapp"></span>
@@ -44,7 +44,7 @@
                 </div>
             </section>
 
-            <section class="about">
+            <section class="about" id="about">
                 <article class="about-box">
                     <h2>BEM VINDO A <span class="highlight_text">DFITNESS</span></h2>
                     <br><br>
@@ -60,7 +60,7 @@
                 </article>
             </section>
 
-            <section class="training">
+            <section class="training" id="training">
 
                 <article class="training-title">
                     <h2>NOSSOS <span class="highlight_text">PROGRAMAS</span></h2>
@@ -74,34 +74,28 @@
 
             </section>
 
-            <section class="students">
+            <section class="photo-album" id="photo-album">
+                <article class="photo-album-box">
+
+                    <!-- CARDS CARREGADOS VIA DOM -->
+                    
+                </article>
+            </section>
+
+            <section class="students" id="students">
                 <article class="students-title">
                     <h2>NOSSOS <span class="highlight_text">ALUNOS</span></h2>  
                     <h3>O que dizem de nós?</h3>           
                 </article>
                 <article class="students-box">
-                    <div class="card-student">
-                        <h3>FULANO</h3>
-                        <br>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, hic reiciendis aperiam nobis minima alias?</p>
-                    </div>
 
-                    <div class="card-student">
-                        <h3>CICRANO</h3>
-                        <br>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, hic reiciendis aperiam nobis minima alias?</p>
-                    </div>
-
-                    <div class="card-student">
-                        <h3>FULANO</h3>
-                        <br>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, hic reiciendis aperiam nobis minima alias?</p>
-                    </div>
+                    <!-- CARDS CARREGADOS VIA DOM -->
+                    
                 </article>
             </section>
 
         </main>
-        <footer>
+        <footer id="footer">
             <h2>FALE <span class="highlight_text">CONOSCO</span></h2>
             <h3>(99)99999-9999</h3>
             <br>
