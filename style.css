@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 a{
     text-decoration: none;
+    color: white;
 }
 
 h1{
@@ -33,7 +38,7 @@ body{
 }
 
 header, main, footer{
-    width: 98%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +47,6 @@ header, main, footer{
 
 header{
     height: 8vh;
-    background-color: black;
 }
 
 div{
@@ -52,7 +56,6 @@ div{
 
 section{
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,7 +89,8 @@ main{
 .home{
     position: relative;
     background-color: #202225;
-    }
+    height: 100vh;
+}
     
 .home:before {
     content: "";
@@ -95,10 +99,24 @@ main{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(./assets/home.jpg);
+    background-image: url(./assets/fundohomePage.png);
+    background-size: 800px auto;
     background-repeat: no-repeat;
-    opacity: 0.05;
+    background-position: bottom left;
+    opacity: 0.5;
     z-index: 0;
+}
+
+.home > div{
+    position: fixed;
+    right: 2%;
+    top: 40;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.home > div > span > img:hover {
+    cursor: pointer;
 }
 
 .home > article > button{
@@ -110,15 +128,8 @@ main{
     width: 160px;
     height: 40px;
     box-shadow: 4px 4px 1px #4D5159;
+    z-index: 3;
 }
-
-/* .home > article > button:hover{
-    cursor: pointer;
-    border: none;
-    background-color: #FDD000;
-    color: #202225;
-    box-shadow: none;
-} */
 
 .about{
     background-color: #2F3136;
@@ -137,20 +148,16 @@ main{
     border: 4px solid #FDD000;;
 }
 
-.about-box > button{
-    
+.about-box > button{  
     background-color: #FDD000;
     color: #2F3136;
-    /* border: 4px solid #FDD000; */
     border: none;
-    
-    /* border-radius: 12px; */
+    transition: opacity .3s;
+    transition: box-shadow .5s;
 }
 
 .about-box > button:hover{
     cursor: pointer;
-    /* color: white;
-    background-color: #2F3136; */
     box-shadow: 4px 4px 1px #4D5159;
     opacity: 0.8;
 }
@@ -158,14 +165,6 @@ main{
 .training{
     flex-direction: column;
     background-color: #2F3136;
-}
-
-.training > article:first-child{
-    height: 30%;
-}
-
-.training > article:last-child{
-    height: 70%;
 }
 
 .card-training{
@@ -180,12 +179,6 @@ main{
     color: #202225;
 }
 
-.students{
-    flex-direction: column;
-    margin-bottom: 12vh;   
-    background-color: #2F3136;
-}
-
 .training-title, .students-title{
     height: 30%;
     width: 100%;
@@ -195,6 +188,39 @@ main{
 .training-box, .students-box{
   height: 70%;  
   width: 100%;
+}
+
+.photo-album{
+    background-color: #2F3136;
+}
+
+.photo-album > article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.photo-album > article > div{
+    width:360px;
+    height: 450px;
+    background-color: #FDD000;
+}
+
+.photo-album > article > div > img{
+    width: 100%;
+    transition: opacity .3s;
+}
+
+.photo-album > article > div > img:hover{
+    opacity: 0.5;
+}
+
+.students{
+    flex-direction: column;
+    margin-bottom: 12vh;   
+    background-color: #2F3136;
 }
 
 .students-box{
@@ -236,18 +262,23 @@ footer >  p {
         font-size: 40px;
     }
 
-    header{
-        background-color: #202225;
+    .options-menu-close{
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        gap: 2vh;
+        width: 80%;   
+        transition: color .3s;
     }
 
-    header, main, footer{
-        width: 100%;
+    .options-menu-close > li > a:hover{
+        cursor: pointer;
+        color: #FDD000;
     }
 
-    .home:before {
-        background-image: url(./assets/fundohomePage.png);
-        background-position: center left;
-        background-size: 50% auto;
+    .options-menu-hamburguer{
+        display: none;
     }
 
     .home {
@@ -259,21 +290,8 @@ footer >  p {
         font-size: 60px;
     }
 
-    .home > div{
-        position: fixed;
-        right: 2%;
-        top: 40;
-        display: flex;
-        flex-direction: column;
-        gap: 2vh;
-    }
-
     .home > div > span > img {
         width: 30px;
-    }
-
-    .home > div > span > img:hover {
-        cursor: pointer;
     }
 
     .about-box > button{
@@ -283,24 +301,6 @@ footer >  p {
         font-weight: 600;
     }
     
-    .options-menu-close{
-        list-style: none;
-        display: flex;
-        justify-content: space-evenly;
-        text-align: center;
-        gap: 2vh;
-        width: 80%;   
-    }
-
-    .options-menu-close > li:hover{
-        cursor: pointer;
-        color: #FDD000;
-    }
-
-    .options-menu-hamburguer{
-        display: none;
-    }
-
     .about{
         align-items: flex-start;
         padding-top: 8vh;
@@ -353,7 +353,7 @@ footer >  p {
     }
 
     h2{
-        font-size: 30px;
+        font-size: 40px;
     }
 
     .options-menu-close{
@@ -376,24 +376,24 @@ footer >  p {
         width: 80%;      
     }
 
-    header, main, footer{
-        width: 100%;
-    }
-
-    .home:before {
-        background-image: url(./assets/backgroundhome.jpg);
-        background-position: top right;
-        background-size: 100% auto;
-    }
-
     .home {
-        justify-content: flex-start;
-        padding-left: 8vw;
-        height: 80vh;
+        justify-content: flex-end;
+    }
+
+    .home:before{
+        background-size: 700px auto;
+    }
+
+    .home > div {
+        top: 10%;
+    }
+
+    .home > div > span > img{
+        width: 28px;
     }
 
     .home > article > h2 {
-        font-size: 60px;
+        font-size: 30px;
     }
 
     .about{
@@ -402,27 +402,24 @@ footer >  p {
         height: 70vh;
     }
 
-    .about-box > button{
-        width: 94%;
-        height: 6vh;
-        font-size: 14px;
-        font-weight: 800;
-        border: none;
-        background-color: #FDD000;
-        color: #2F3136;
-    }
-
     .about > article {
         height: 100%;
         width: 50%;
+    }
+
+    .about > article > img{
+        width: 100%;
     }
 
     .about-box{ 
         padding-left: 8vw;
     }
 
-    .about > article > img{
-        width: 100%;
+    .about-box > button{
+        width: 94%;
+        height: 6vh;
+        font-size: 14px;
+        font-weight: 800;
     }
 
     .training{
@@ -462,6 +459,14 @@ footer >  p {
         font-size: 30px;
     }
 
+    section{
+        padding: 4vh 0 4vh 0;
+    }
+
+    header, main, footer{
+        width: 98%;
+    }
+
     .options-menu-close{
         display: none;
     }
@@ -481,140 +486,42 @@ footer >  p {
         gap: 2vh;
         width: 80%;      
     }
-    
-    main{
-        flex-direction: column;
-    }
-    
-    .home h1, .home h2{
-        position: relative;
-        z-index: 1;
-    }
-    
-    .home{
-        position: relative;
-        background-color: #202225;
-        }
-        
+     
     .home:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url(./assets/home.jpg);
-        background-position: top center;
-        background-size: 200% auto;
-        background-repeat: no-repeat;
-        opacity: 0.1;
-        z-index: 0;
+        background-position: bottom left;
+        opacity: 0.2;
+    }
+
+    .home > div{
+        display: none;
     }
     
     .about{
         flex-direction: column;
         background-color: #2F3136;
     }
-    
-    .about > article{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        animation: fromLeft .7s .2s backwards;
-    }
-    
-    .about > article > img{
-        width: 90%;
-        border: 4px solid #FDD000;;
-    }
 
     .about-box > button{
-        background-color: #FDD000;
-        color: #2F3136;
         width: 90%;
         height: 6vh;
-        border: none;
-        border-radius: 12px;
         font-size: 16px;
         font-weight: 600;
         margin-bottom: 4vh;
     }
     
-    .training{
-        flex-direction: column;
-    }
-       
-    .card-training:hover{
-        cursor: pointer;
-        background-color: #FDD000;
-        color: #202225;
-    }
-    
-    .card-training{
-        width: 100%;
-        height: 20vh;
-        background-color: #FDD000;
-        margin-bottom: 2vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        color: #202225;
-    }
-    
-    .students{
-        flex-direction: column;
-        margin-bottom: 12vh;   
-        padding-bottom: 4vh;
-    }
-    
     .training-title, .students-title{
-        height: 30%;
-        width: 100%;
         display: flex;
         justify-content: center;
         flex-direction: column;
-    }
-    
-    .training-box, .students-box{
-      height: 70%;  
-      width: 100%;
     }
      
     .students-box{
-        height: 70%;  
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
-        gap: 12px
-    }
-    
-    .card-student{
-        width: 80%;
-        max-width: 350px;
-        height: 300px;
-        background-color: #4D5159;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        padding: 12px;
-    }
-    
-    footer{
-        flex-direction: column;
-        margin-bottom: 8vh;
     }
     
     footer > .map{
         width: 100%;
-    }
-    
-    footer >  p {
-        margin-bottom: 2vh;
-    }   
+    }  
 }
 
 @keyframes fromLeft{
